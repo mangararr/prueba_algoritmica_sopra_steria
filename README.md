@@ -1,8 +1,14 @@
 Para acceder a la ejecución de los ejercicios pulsa en los siguientes enlaces:
 
+Una vez en CodeSandBox ejecute en la terminal, parte inferior de la pantalla, el ejercicio que desea ver de la siguiente forma:
+
+
+
 Ejercicio 1:
-https://www.pythonanywhere.com/user/mangararr/shares/788cfad1a9c6412cb5d860bee390364c/
+python ejercicio1.py
 
 Ejercicio 2:
+python ejercicio2.py
 
 Ejercicio 3:
+python ejercicio3.py
