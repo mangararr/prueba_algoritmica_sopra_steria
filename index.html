@@ -12,7 +12,7 @@
 
         if (selectedExercise) {
             // Usa fetch para cargar el contenido del archivo Python desde GitHub
-            fetch(`https://raw.githubusercontent.com/mangararr/prueba_algoritmica_sopra_steria/${selectedExercise}`)
+            fetch(`https://raw.githubusercontent.com/mangararr/prueba_algoritmica_sopra_steria/blob/main/${selectedExercise}`)
                 .then(response => response.text()) // Convierte la respuesta en texto
                 .then(code => {
                     codeDisplay.textContent = code; // Muestra el código en el <pre>
