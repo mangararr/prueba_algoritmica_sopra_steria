@@ -1,1 +1,43 @@
+<select id="selector">
+    <option value="">-- Selecciona un ejercicio --</option>
+    <option value="ejercicio1.py">Ejercicio 1</option>
+    <option value="ejercicio2.py">Ejercicio 2</option>
+    <option value="ejercicio3.py">Ejercicio 3</option>
+</select>
 
+<script>
+    document.getElementById('selector').addEventListener('change', function() {
+        const selectedExercise = this.value; // Obtiene el ejercicio seleccionado
+        const codeDisplay = document.getElementById('codeDisplay'); // Donde se mostrará el código
+
+        if (selectedExercise) {
+            // Usa fetch para cargar el contenido del archivo Python desde GitHub
+            fetch(`https://raw.githubusercontent.com/mangararr/prueba_algoritmica_sopra_steria/${selectedExercise}`)
+                .then(response => response.text()) // Convierte la respuesta en texto
+                .then(code => {
+                    codeDisplay.textContent = code; // Muestra el código en el <pre>
+                })
+                .catch(error => {
+                    codeDisplay.textContent = "No se pudo cargar el código."; // Error si algo falla
+                    console.error('Error al cargar el archivo:', error);
+                });
+        } else {
+            codeDisplay.textContent = "Selecciona un ejercicio para mostrar el código..."; // Mensaje por defecto
+        }
+    });
+</script>
+
+<button id="runOnColab">Ejecutar en Google Colab</button>
+
+<script>
+    document.getElementById('runOnColab').addEventListener('click', function() {
+        const selectedExercise = document.getElementById('selector').value;
+        if (selectedExercise) {
+            // Genera el enlace para Google Colab
+            const colabUrl = `https://colab.research.google.com/github/mangararr/prueba_algoritmica_sopra_steria/${selectedExercise}`;
+            window.open(colabUrl, '_blank');  // Abre el enlace en una nueva pestaña
+        } else {
+            alert("Por favor, selecciona un ejercicio.");
+        }
+    });
+</script>
