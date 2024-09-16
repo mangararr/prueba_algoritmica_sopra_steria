@@ -1,8 +1,4 @@
-Para acceder a la ejecución de los ejercicios pulsa en los siguientes enlaces:
-
-Una vez en CodeSandBox ejecute en la terminal, parte inferior de la pantalla, el ejercicio que desea ver de la siguiente forma:
-
-
+Para proceder a la ejecución de los ejercicios, descarga cada archivo y en una terminal de Windows o en la terminal de un IDE como VSCODE, ejecuta lo siguiente:
 
 Ejercicio 1:
 python ejercicio1.py
